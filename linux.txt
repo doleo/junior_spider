@@ -9,3 +9,21 @@ Linux 的软件安装目录是也是有讲究的，理解这一点，在对系�
 源码放哪里？
 /usr/src：系统级的源码目录。
 /usr/local/src：用户级的源码目录。
+
+
+Linux 安装 tar.gz 包
+1）解压tar.gz包
+
+　　　　==》最常见的gz格式，则可以执行：“tar –xvzf 软件包名”，就可以一步完成解压与解包工作。
+
+　　　　tar -zxvf 软件包名.tar.gz -C /home/hao   将软件包名.tar.gz解压到指定的目录下 （注意：-C为大写）
+
+2）进入解压后的文件目录下 执行“./configure”命令为编译做好准备；
+
+　　　　./configure --prefix=/opt
+
+　　　　表示安装到/opt目录
+
+3） 执行“make”命令进行软件编译；
+4） 执行“make install”完成安装；
+5） 执行“make clean”删除安装时产生的临时文件。
